@@ -1,0 +1,19 @@
+.articleBody{
+    grid-column: 3 / -3;
+}
+
+.articleTitle{
+    font-size: 18pt;
+}
+
+.articleContent{
+    font-size: 14pt;
+    padding: 10px;
+    margin: 4px;
+    border-radius: 16px;
+    border: 1px solid gray;
+}
+
+.article{
+    padding: 100px;
+}

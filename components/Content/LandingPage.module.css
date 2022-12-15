@@ -4,6 +4,7 @@
     grid-auto-flow: column;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    scroll-padding: 0vh 0vw 60vh 0vw;
 }
 
 .landingPageContent{

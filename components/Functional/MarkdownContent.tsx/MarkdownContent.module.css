@@ -21,6 +21,14 @@
   box-shadow: inset 0px 0px 21px -14px black;
 }
 
+.subtext{
+    font-size: 12pt;
+}
+
+.subtextTheme{
+    color: yellow;
+}
+
 .pad_10 > * {
     padding: 10px;
   }

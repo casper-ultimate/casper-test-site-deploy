@@ -8,20 +8,29 @@ function GetTextContent(): MarkupGroup[] {
     return [
         MakeMarkupGroup('title', [
             {
-                tag: 'bigLabel',
-                text: 'Welcome to the'
+                tag: 'span',
+                text: 'Project'
             },
             {
                 tag: 'bigLabel2',
-                text: 'Streamer Asset Platform!'
+                text: 'CASPer'
             },
+            {
+                tag: 'subtext',
+                text: 'C.reator A.sset and S.upport P.latform E.veryone R.ules'
+            },
+            {
+                tag: 'image',
+                text: 'https://cus-caspercdn-cqbbeaahh6etgnf3.z01.azurefd.net/test/gitavatar.png'
+            }
         ], 
         [
+            mkStyles.titledParagraph,
+            mkStyles.subtextTheme,
             mkStyles.subItem_2_theme,
             mkStyles.centerPiece,
             mkStyles.boxedGroup, 
             mkStyles.pad_10,
-
         ]),
 
         MakeMarkupGroup('explainer', [

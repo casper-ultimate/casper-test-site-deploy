@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './MarkdownContent.module.css'
 
 export const mkStyles = styles;
@@ -14,9 +15,12 @@ export interface MarkupGroup{
 }
 
 const MarkupTags = {
+    image: (e:any) => <img src={e} style={{width: '100%', height: 'auto'}} alt={"BackgroundImage"}/>,
     div: (e:any) => <div>{e}</div>,
+    span: (e:any) => <span>{e}</span>,
     bigLabel: (e:any)=> <h1>{e}</h1>,
     bigLabel2: (e:any)=> <div className={styles.sloganText}>{e}</div>,
+    subtext: (e:any)=> <div className={styles.subtext}>{e}</div>,
 }
 
 function GetComponentFromMarkup(data: MarkupData):JSX.Element{

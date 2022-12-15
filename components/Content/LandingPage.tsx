@@ -17,7 +17,7 @@ function GetTextContent(): MarkupGroup[] {
             },
             {
                 tag: 'subtext',
-                text: 'C.reator A.sset S.upport P.latform E.veryone R.ules'
+                text: 'Creator Asset Support Platform Everyone Rules'
             },
             {
                 tag: 'image',

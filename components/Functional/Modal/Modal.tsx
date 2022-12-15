@@ -51,8 +51,7 @@ export function Modal({id}:{id?:string}){
                     !displayed.modal?.options?.includes(ModalControls.EXIT_CROSS)?
                     null:
                     <div 
-                    {
-                        ...{controltype: ModalControls.EXIT_CROSS.toString()}}
+                        {...{controltype: ModalControls.EXIT_CROSS.toString() }}
                         tabIndex={2} 
                         className={styles.closeCross}
                         onClick={(e)=>{
@@ -69,7 +68,7 @@ export function Modal({id}:{id?:string}){
                 !displayed.modal?.options?.includes(ModalControls.CLOSE_TAB)?
                 null:
                 <div key='control4' 
-                    {...{controltype: ModalControls.CLOSE_TAB.toString()}}
+                    {...{controltype: ModalControls.CLOSE_TAB.toString() }}
                     tabIndex={2} 
                     className={styles.closeTab}
                     onClick={(e)=>{

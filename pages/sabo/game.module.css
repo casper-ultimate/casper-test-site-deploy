@@ -1,0 +1,49 @@
+.screen{
+    display: grid;    
+    box-shadow: inset 0px 0px 2px 2px grey;
+    grid-gap: 5px;
+    margin: 10px 10px;
+    padding: 10px;
+}
+
+.categoryContainer{
+    display: grid;
+}
+
+.contentContainer{
+    display: grid;
+}
+
+.lobbyGrid,
+.gameListGrid{
+    display: grid;    
+    grid-gap: 5px;
+    margin: 10px 10px;
+    padding: 10px;
+}
+
+.gameListRow{
+    display: grid;
+    grid-auto-flow: column;
+    box-shadow: 0px 0px 2px black;
+}
+
+.gameListItemAction{
+    place-self: end;
+    border-radius: 6px;
+    border: 1px solid gray;
+}
+
+.gameListItem{
+    padding: 5px;
+    margin: 5px;
+}
+
+.newGameButton{
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 2px 2px gray;
+    width: min-content;
+    height: min-content;
+    justify-self: end;
+}

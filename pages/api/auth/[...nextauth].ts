@@ -6,13 +6,11 @@ import GithubProvider from "next-auth/providers/github"
 import TwitterProvider from "next-auth/providers/twitter"
 import Auth0Provider from "next-auth/providers/auth0"
 import { FirestoreAdapter } from "@next-auth/firebase-adapter"
-import { CLIENT_RENEG_WINDOW } from "tls"
 // import AppleProvider from "next-auth/providers/apple"
 // import EmailProvider from "next-auth/providers/email"
 
 // For more information on each option (and a full list of options) go to
 // https://next-auth.js.org/configuration/options
-
 export const authOptions: NextAuthOptions = {
   // https://next-auth.js.org/configuration/providers/oauth
   providers: [
@@ -33,9 +31,26 @@ export const authOptions: NextAuthOptions = {
       },
     }),
     */
+    FacebookProvider({
+      clientId: process.env.FACEBOOK_ID??'',
+      clientSecret: process.env.FACEBOOK_SECRET??'',
+    }),
+    GithubProvider({
+      clientId: process.env.GITHUB_ID??'',
+      clientSecret: process.env.GITHUB_SECRET??'',
+    }),
     GoogleProvider({
       clientId: process.env.NEXT_PUBLIC_GOOGLE_ID??'',
       clientSecret: process.env.GOOGLE_SECRET??'',
+    }),
+    TwitterProvider({
+      clientId: process.env.TWITTER_ID??'',
+      clientSecret: process.env.TWITTER_SECRET??'',
+    }),
+    Auth0Provider({
+      clientId: process.env.AUTH0_ID??'',
+      clientSecret: process.env.AUTH0_SECRET??'',
+      issuer: process.env.AUTH0_ISSUER??'',
     }),
   ],
   theme: {

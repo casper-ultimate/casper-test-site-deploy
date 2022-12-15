@@ -13,10 +13,9 @@ body {
 
 .body-fill{
   display: grid;
-  grid-template-rows: min-content 1fr;
   overflow: hidden;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   box-sizing: border-box;
   position: absolute;
 }

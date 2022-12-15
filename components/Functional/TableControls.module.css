@@ -1,0 +1,29 @@
+.paginationGroup{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.paginationValue{
+    box-shadow: inset 0px 0px 3px 1px grey
+}
+
+.paginationControl{
+    user-select: none;
+    box-shadow: 0px 0px 3px 0px gray;
+}
+
+.paginationGroup > *{
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.paginationControl:hover{
+    background-color: white;
+    filter: brightness(0.85);
+}
+
+.blankArrow{
+    visibility: hidden;
+    pointer-events: none;
+}

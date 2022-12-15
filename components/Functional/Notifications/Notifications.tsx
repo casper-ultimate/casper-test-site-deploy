@@ -1,8 +1,8 @@
-import {useSession } from 'next-auth/react'
+import {useSession } from "next-auth/react"
 import { GetModalService, ModalControls, ModalValues } from '../../Functional/ModalService'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faEnvelope, faEnvelopeOpen} from '@fortawesome/free-solid-svg-icons'
+import {faEnvelope, faEnvelopeOpen} from "@fortawesome/free-solid-svg-icons"
 
 import styles from './NotificationWidget.module.css'
 

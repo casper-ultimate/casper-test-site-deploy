@@ -5,5 +5,6 @@ export const GetRoutes = ()=>{
 
     return {
         toHomePage: () => router.push("/home"),
+        toSaboGame: (gamelink: string) => router.push(gamelink)
     }
 } 

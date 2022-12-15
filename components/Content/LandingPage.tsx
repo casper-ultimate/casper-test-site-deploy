@@ -16,13 +16,13 @@ function GetTextContent(): MarkupGroup[] {
                 text: 'CASPer'
             },
             {
+                tag: 'image',
+                text: 'https://cus-caspercdn-cqbbeaahh6etgnf3.z01.azurefd.net/test/gitavatar.png'
+            },
+            {
                 tag: 'subtext',
                 text: 'Creator Asset Support Platform Everyone Rules'
             },
-            {
-                tag: 'image',
-                text: 'https://cus-caspercdn-cqbbeaahh6etgnf3.z01.azurefd.net/test/gitavatar.png'
-            }
         ], 
         [
             mkStyles.titledParagraph,

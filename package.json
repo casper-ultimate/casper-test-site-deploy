@@ -10,7 +10,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
-  },
+  }, 
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-brands-svg-icons": "^6.2.1",

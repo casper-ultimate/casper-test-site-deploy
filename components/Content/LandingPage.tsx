@@ -21,7 +21,7 @@ function GetTextContent(): MarkupGroup[] {
             },
             {
                 tag: 'subtext',
-                text: 'Creator Asset Support Platform Everyone Rules'
+                text: 'Creator Asset Supportive Platform Everyone Reuses'
             },
         ], 
         [

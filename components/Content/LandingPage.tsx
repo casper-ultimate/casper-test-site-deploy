@@ -17,7 +17,7 @@ function GetTextContent(): MarkupGroup[] {
             },
             {
                 tag: 'image',
-                text: 'https://cus-caspercdn-cqbbeaahh6etgnf3.z01.azurefd.net/test/gitavatar.png'
+                text: 'https://caspertecc-ftdhgsfpbcd4bkbk.z01.azurefd.net/test/gitavatar.png'
             },
             {
                 tag: 'subtext',

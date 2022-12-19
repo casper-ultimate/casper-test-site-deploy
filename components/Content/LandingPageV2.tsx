@@ -109,7 +109,7 @@ function GetTextCard(text:any){
 }
 
 function GetImageCard(item:any){
-    return (a:number) =><div className={[
+    return (a:number) =><div key={a} className={[
         styles.pad20,
         styles.flexRow,
         styles.blurBk,

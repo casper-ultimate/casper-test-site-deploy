@@ -47,7 +47,6 @@ var LandingPageLinks = [
     {href:'#about_blank', content:'Home'},
     {href:'#about_blank', content:'About'},
     {href:'#about_blank', content:'Sign in'},
-    {href:'#about_blank', content:'Home'},
 ].map(({href,content}:{href:string, content:string},i)=><Link key={i} href={href}>{content}</Link>);
 
 var inlineCard = (

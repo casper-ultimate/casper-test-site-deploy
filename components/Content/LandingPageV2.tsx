@@ -60,7 +60,7 @@ var inlineCard = (
         styles.gap20,
         styles.justifyCenter
     ].join(' ')}
-    style={{backgroundImage: `url(${titleImageLocation})`, aspectRatio: 1, filter: `hue-rotate(160deg);`}}>{
+    style={{backgroundImage: `url(${titleImageLocation})`, aspectRatio: 1, filter: `hue-rotate(160deg)`}}>{
         <div>Project</div>}{<div>CASPER</div>
     }</div>)
 

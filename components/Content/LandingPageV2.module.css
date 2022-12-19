@@ -28,7 +28,7 @@
     --landingPageAlignment: unset;
 }
 
-@media (min-width: 890px) {
+@media (min-width: 740px) {
     .fullScreen{
         --fullScreenDisplay: unset;
     }
@@ -40,7 +40,7 @@
     }
 }
 
-@media(max-width: 890px){
+@media(max-width: 740px){
     .fullScreen{
         --fullScreenDisplay: none;
     }
@@ -228,7 +228,7 @@
     flex-grow: 1;
     height: 100%;
     overflow: auto;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
 }
 
 .blurBk{

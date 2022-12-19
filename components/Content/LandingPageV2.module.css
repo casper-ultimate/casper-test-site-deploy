@@ -13,7 +13,7 @@
     background-color: black;
     display: flex;
     flex-direction: column;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .fullScreen{

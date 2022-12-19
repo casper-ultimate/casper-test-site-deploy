@@ -44,10 +44,11 @@ export function LandingPageV2(){
 }
 
 var LandingPageLinks = [
-    <Link href={'#about_blank'}>Home</Link>,
-    <Link href={'#about_blank'}>About</Link>,
-    <Link href={'#about_blank'}>Sign in</Link>,
-];
+    {href:'#about_blank', content:'Home'},
+    {href:'#about_blank', content:'About'},
+    {href:'#about_blank', content:'Sign in'},
+    {href:'#about_blank', content:'Home'},
+].map(({href,content}:{href:string, content:string},i)=><Link key={i} href={href}>{content}</Link>);
 
 var inlineCard = (
     <div className={[

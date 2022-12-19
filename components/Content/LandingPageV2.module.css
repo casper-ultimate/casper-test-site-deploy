@@ -53,12 +53,13 @@
 }
 
 .fullScreen{
-    display: var(--fullScreenDisplay);
+    display: var(--fullScreenDisplay) !important;
 }
 
 .unfullScreen{
-    display: var(--unfullScreenDisplay);
+    display: var(--unfullScreenDisplay) !important;
 }
+
 .landingPageAlignment{
     justify-content: var(--landingPageAlignment);
 }
@@ -103,6 +104,10 @@
 
 .cover{
     background-size: cover;
+}
+
+.bkCenter{
+    background-position: center center;
 }
 
 .absolute{
@@ -166,6 +171,10 @@
     flex-direction: row;
 }
 
+.noIndent > *{
+    text-indent: 0px;
+}
+
 .gap20{
     gap: 20px;
 }
@@ -176,6 +185,9 @@
 
 .justifyEnd{
     justify-content: end;
+}
+.justifyCenter{
+    justify-content: center;
 }
 
 .preWrap{
@@ -194,11 +206,20 @@
     display: flex;
     flex-direction: column;
     text-indent: 50px;
-    gap: 20px;
+}
+
+.pad25_75{
+    --swipePadding: 25% 10px 75%;
+    padding: var(--swipePadding);
+}
+
+.swipePadding{
+    --swipePadding: 50% 10px;
 }
 
 .swipeMode > *{
-    padding: calc(50% - 20px) 0px;
+    padding: var(--swipePadding);
+    margin-top: 100px;
     scroll-snap-align: start;
 }
 
@@ -210,7 +231,7 @@
 }
 
 .blurBk{
-    backdrop-filter: brightness(0.7) blur(2px);
-    padding: 10px;
+    backdrop-filter: hue-rotate(187deg) brightness(0.7) blur(2px);
     border-radius: 8px;
+    box-shadow: inset 0px 0px 60px -26px #43eeff;
 }

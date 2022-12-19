@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import styles from './LandingPageV2.module.css'
 
-var titleImageLocation = 'https://cuscasperplatform.blob.core.windows.net/test/solo-avatar.png'
+var titleImageLocation = 'https://cuscasperplatform.blob.core.windows.net/test/AVATAR4_SHADING.png'
+var backgroundImageLocation = 'https://cuscasperplatform.blob.core.windows.net/test/bluedatacenter.png'
 
 export function LandingPageV2(){
     var pageImage = (<div className={[
@@ -12,6 +13,16 @@ export function LandingPageV2(){
         styles.absolute,
         styles.z1
     ].join(' ')} style={{backgroundImage: `url(${titleImageLocation})`}}/>)
+    
+    var pageImage2 = (<div className={[
+        styles.unfullScreen,
+        styles.bkCenter,
+        styles.noRepeatImage,
+        styles.imageHeightMax,
+        styles.cover,
+        styles.absolute,
+        styles.z1
+    ].join(' ')} style={{backgroundImage: `url(${backgroundImageLocation})`}}/>)
 
     return (
         <div className={styles.landingPageContentContainer}>{
@@ -19,6 +30,8 @@ export function LandingPageV2(){
                 styles.landingPageContent,
             ].join(' ')}>{
                 pageImage
+            }{
+                pageImage2
             }{
                 GetLinks()
             }{
@@ -38,12 +51,16 @@ var LandingPageLinks = [
 
 var inlineCard = (
     <div className={[
-        styles.unfullScreen,
         styles.imageHeightMax,
         styles.noRepeatImage,
         styles.cover,
+        styles.flexRow,
+        styles.noIndent,
+        styles.gap20,
+        styles.justifyCenter
     ].join(' ')}
-    style={{backgroundImage: `url(${titleImageLocation})`, aspectRatio: 1}}>{
+    style={{backgroundImage: `url(${titleImageLocation})`, aspectRatio: 1, filter: `hue-rotate(160deg);`}}>{
+        <div>Project</div>}{<div>CASPER</div>
     }</div>)
 
 function GetText(){
@@ -58,13 +75,14 @@ function GetText(){
     ].join(' ')}>
         <div className={[
             styles.fontColor,
+            styles.swipePadding,
+            styles.swipeMode,
             styles.bkRed,
             styles.relative,
             styles.preWrap,
             styles.width1,
             styles.paraLine,
             styles.paragraphContainer,
-            styles.swipeMode,
             styles.paragraphItems,
         ].join(' ')}>{
             [
@@ -73,17 +91,30 @@ function GetText(){
                 GetTextCard(`We believe that everyone has something unique and valuable to share with the world, and our platform is designed to give content creators the tools they need to succeed. Whether you are a seasoned creator looking to take your channel to the next level or a newcomer just starting out, we have something for you.`),
                 GetTextCard(`With Project Casper, you can expect a seamless streaming experience, innovative features that enhance viewer engagement, and a supportive community of like-minded creators. Our team is constantly working to improve the platform and add new features, so you can focus on what you do best: creating amazing content.`),
                 GetTextCard(`Whether you're a content creator looking to take your stream to the next level, or a viewer looking to support and connect with your favorite creators, Project Casper has something for everyone. So join us today and be a part of the future of streaming.`),
+                (i:number)=><div key={i}></div>
             ].map((e,i)=>(e(i)))
             }</div>
     </div>)
 }
 
 function GetTextCard(text:any){
-    return (a:number) =><div key={a} className={styles.blurBk}>{text}</div>
+    return (a:number) =><div key={a}
+        className={[
+            styles.blurBk,
+        ].join(' ')}><div className={[
+            styles.pad20,
+        ].join(' ')}>{text}</div>
+    </div>
 }
 
 function GetImageCard(item:any){
-    return (a:number) =>item
+    return (a:number) =><div className={[
+        styles.pad20,
+        styles.flexRow,
+        styles.blurBk,
+        styles.unfullScreen,
+        styles.pad25_75
+    ].join(' ')}>{item}</div>
 }
 
 function GetCarouselButtons(){

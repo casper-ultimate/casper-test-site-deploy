@@ -16,6 +16,67 @@
     overflow: auto;
 }
 
+.fullScreen{
+    --fullScreenDisplay: none;
+}
+
+.unfullScreen{
+    --unfullScreenDisplay: unset;
+}
+
+.landingPageAlignment{
+    --landingPageAlignment: unset;
+}
+
+@media (min-width: 890px) {
+    .fullScreen{
+        --fullScreenDisplay: unset;
+    }
+    .unfullScreen{
+        --unfullScreenDisplay: none;
+    }
+    .landingPageAlignment{
+        --landingPageAlignment: end;
+    }
+}
+
+@media(max-width: 890px){
+    .fullScreen{
+        --fullScreenDisplay: none;
+    }
+    .unfullScreen{
+        --unfullScreenDisplay: unset;
+    }
+    .landingPageAlignment{
+        --landingPageAlignment: center;
+    }
+}
+
+.fullScreen{
+    display: var(--fullScreenDisplay);
+}
+
+.unfullScreen{
+    display: var(--unfullScreenDisplay);
+}
+.landingPageAlignment{
+    justify-content: var(--landingPageAlignment);
+}
+
+.maxW1400{
+    --heroContentMaxWidth: unset;
+}
+
+@media(min-width: 1400px){
+    .maxW1400{
+        --heroContentMaxWidth: 1400px;
+    }
+}
+
+.maxW1400{
+    max-width: var(--heroContentMaxWidth);
+}
+
 .gridForm{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(50px, min-content));
@@ -32,9 +93,16 @@
 }
 
 .imageHeightMax{
-    background-size: contain;
     height: 100%;
     width: 100%;
+}
+
+.contain{
+    background-size: contain;
+}
+
+.cover{
+    background-size: cover;
 }
 
 .absolute{

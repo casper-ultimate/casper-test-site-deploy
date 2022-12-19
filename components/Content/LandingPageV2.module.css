@@ -220,7 +220,8 @@
 .swipeMode > *{
     padding: var(--swipePadding);
     margin-top: 100px;
-    scroll-snap-align: start;
+    scroll-snap-align: start end;
+    scroll-padding: 20% 0px;
 }
 
 .scrollFit{

@@ -5,15 +5,16 @@ import {Topbar} from "./Admin/Topbar"
 import { Modal } from "./Functional/Modal/Modal"
 
 interface Props {
-  children: React.ReactNode
+  children: React.ReactNode,
+  topBarVisible?: boolean
 }
 
-export default function Layout({ children }: Props) {
+export default function Layout({ children, topBarVisible=true }: Props) {
  
   return (
     <div className={"body-fill"}>
       <Modal key={0} id={'modal-entry'}/>
-      <Topbar key={1}></Topbar>
+      {topBarVisible ? <Topbar key={1}></Topbar>: <div></div>}
       {children}
     </div>
   )

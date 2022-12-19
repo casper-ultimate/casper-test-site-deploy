@@ -1,13 +1,13 @@
 import { SessionProvider } from "next-auth/react"
-import LandingPageContent from "../components/Content/LandingPage"
+import { LandingPageV2 } from "../components/Content/LandingPageV2"
 import Layout from "../components/layout"
 import { GetRoutes } from "../drivers/PageRoutes"
 export default function IndexPage() {
   const route = GetRoutes()
 
   return (
-      <Layout>
-        <LandingPageContent/>
+      <Layout topBarVisible={false}>
+        <LandingPageV2/>
       </Layout>
   )
 }

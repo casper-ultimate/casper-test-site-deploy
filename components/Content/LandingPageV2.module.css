@@ -1,0 +1,241 @@
+.landingPageContentContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    grid-auto-flow: column;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-padding: 0vh 0vw 60vh 0vw;
+}
+
+.landingPageContent{
+    grid-column: 2 / -1;
+    grid-row: 1 / span 2;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.fullScreen{
+    --fullScreenDisplay: none;
+}
+
+.unfullScreen{
+    --unfullScreenDisplay: unset;
+}
+
+.landingPageAlignment{
+    --landingPageAlignment: unset;
+}
+
+@media (min-width: 890px) {
+    .fullScreen{
+        --fullScreenDisplay: unset;
+    }
+    .unfullScreen{
+        --unfullScreenDisplay: none;
+    }
+    .landingPageAlignment{
+        --landingPageAlignment: end;
+    }
+}
+
+@media(max-width: 890px){
+    .fullScreen{
+        --fullScreenDisplay: none;
+    }
+    .unfullScreen{
+        --unfullScreenDisplay: unset;
+    }
+    .landingPageAlignment{
+        --landingPageAlignment: center;
+    }
+}
+
+.fullScreen{
+    display: var(--fullScreenDisplay) !important;
+}
+
+.unfullScreen{
+    display: var(--unfullScreenDisplay) !important;
+}
+
+.landingPageAlignment{
+    justify-content: var(--landingPageAlignment);
+}
+
+.maxW1400{
+    --heroContentMaxWidth: unset;
+}
+
+@media(min-width: 1400px){
+    .maxW1400{
+        --heroContentMaxWidth: 1400px;
+    }
+}
+
+.maxW1400{
+    max-width: var(--heroContentMaxWidth);
+}
+
+.gridForm{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, min-content));
+    grid-auto-flow: column;
+    grid-auto-rows: 20px;
+}
+
+.gridCover{
+    grid-column: 1 / -1;
+}
+
+.noRepeatImage{
+    background-repeat: no-repeat;
+}
+
+.imageHeightMax{
+    height: 100%;
+    width: 100%;
+}
+
+.contain{
+    background-size: contain;
+}
+
+.cover{
+    background-size: cover;
+}
+
+.bkCenter{
+    background-position: center center;
+}
+
+.absolute{
+    position: absolute;
+    top: 0px;
+}
+
+.oneAndOneHalfLineHeight{
+    line-height: 1.5;
+}
+
+.z1{
+    z-index: 1;
+}
+
+.z2{
+    z-index: 2;
+}
+
+.relative{
+    position: relative;
+}
+
+.sticky0{
+    position: sticky;
+    top: 0px;
+}
+
+.linkUnderline{
+    text-underline-offset: 8px;
+    text-decoration-line: underline !important;
+    text-decoration-thickness: 2px;
+}
+
+.linkContainer > *{
+    --hoverdeco: #b7e3ff;    
+}
+
+.linkContainer > *:hover,
+.linkContainer a:active{
+    --hoverdeco: #2b8fd0;
+}
+
+.linkContainer > * > a{
+    text-decoration-color: var(--hoverdeco);
+    color: var(--hoverdeco);
+}
+
+.linkColor a{
+    color: white;
+}
+.fontColor{
+    color: white;
+}
+
+.bkRed{
+}
+
+.flexRow{
+    display: flex;
+    flex-direction: row;
+}
+
+.noIndent > *{
+    text-indent: 0px;
+}
+
+.gap20{
+    gap: 20px;
+}
+
+.pad20{
+    padding: 20px;
+}
+
+.justifyEnd{
+    justify-content: end;
+}
+.justifyCenter{
+    justify-content: center;
+}
+
+.preWrap{
+    white-space: break-spaces;
+}
+
+.width1{
+    width: 500px;
+}
+
+.paraLine{
+    line-height: 2.5;
+}
+
+.paragraphContainer{
+    display: flex;
+    flex-direction: column;
+    text-indent: 50px;
+}
+
+.pad25_75{
+    --swipePadding: 25% 10px 75%;
+    padding: var(--swipePadding);
+}
+
+.swipePadding{
+    --swipePadding: 50% 10px;
+}
+
+.swipeMode > *{
+    padding: var(--swipePadding);
+    margin-top: 100px;
+    scroll-snap-align: start;
+}
+
+.scrollFit{
+    flex-grow: 1;
+    height: 100%;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
+.blurBk{
+    backdrop-filter: hue-rotate(187deg) brightness(0.7) blur(2px);
+    border-radius: 8px;
+    box-shadow: inset 0px 0px 60px -26px #43eeff;
+}
+
+.radius8{
+    border-radius: 8px;
+}

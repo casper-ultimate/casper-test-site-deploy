@@ -1,0 +1,148 @@
+.landingPageContentContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    grid-auto-flow: column;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-padding: 0vh 0vw 60vh 0vw;
+}
+
+.landingPageContent{
+    grid-column: 2 / -1;
+    grid-row: 1 / span 2;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.gridForm{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, min-content));
+    grid-auto-flow: column;
+    grid-auto-rows: 20px;
+}
+
+.gridCover{
+    grid-column: 1 / -1;
+}
+
+.noRepeatImage{
+    background-repeat: no-repeat;
+}
+
+.imageHeightMax{
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.absolute{
+    position: absolute;
+    top: 0px;
+}
+
+.oneAndOneHalfLineHeight{
+    line-height: 1.5;
+}
+
+.z1{
+    z-index: 1;
+}
+
+.z2{
+    z-index: 2;
+}
+
+.relative{
+    position: relative;
+}
+
+.sticky0{
+    position: sticky;
+    top: 0px;
+}
+
+.linkUnderline{
+    text-underline-offset: 8px;
+    text-decoration-line: underline !important;
+    text-decoration-thickness: 2px;
+}
+
+.linkContainer > *{
+    --hoverdeco: #b7e3ff;    
+}
+
+.linkContainer > *:hover,
+.linkContainer a:active{
+    --hoverdeco: #2b8fd0;
+}
+
+.linkContainer > * > a{
+    text-decoration-color: var(--hoverdeco);
+    color: var(--hoverdeco);
+}
+
+.linkColor a{
+    color: white;
+}
+.fontColor{
+    color: white;
+}
+
+.bkRed{
+}
+
+.flexRow{
+    display: flex;
+    flex-direction: row;
+}
+
+.gap20{
+    gap: 20px;
+}
+
+.pad20{
+    padding: 20px;
+}
+
+.justifyEnd{
+    justify-content: end;
+}
+
+.preWrap{
+    white-space: break-spaces;
+}
+
+.width1{
+    width: 500px;
+}
+
+.paraLine{
+    line-height: 2.5;
+}
+
+.paragraphContainer{
+    display: flex;
+    flex-direction: column;
+    text-indent: 50px;
+    gap: 20px;
+}
+
+.swipeMode > *{
+    padding: calc(50% - 20px) 0px;
+    scroll-snap-align: start;
+}
+
+.scrollFit{
+    flex-grow: 1;
+    height: 100%;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
+.blurBk{
+    backdrop-filter: brightness(0.7) blur(2px);
+    padding: 10px;
+    border-radius: 8px;
+}
